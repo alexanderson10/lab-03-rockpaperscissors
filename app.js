@@ -1,4 +1,5 @@
 // import functions and grab DOM elements
+import { getRandomThrow } from "./get-random-throw.js"
 const button = document.getElementById('play')
 
 // initialize state
@@ -7,4 +8,6 @@ const button = document.getElementById('play')
 button.addEventListener('click', () => {
     const playerChoice = document.querySelector('input:checked')
     console.log(playerChoice.value)
+    const computersThrow = getRandomThrow()
+    console.log(computersThrow)
 })
